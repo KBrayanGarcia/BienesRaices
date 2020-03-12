@@ -1,1 +1,9 @@
--var enlacesPaginas = ["Nosotros", "Anuncios", "Blog", "Contacto"] 
+-var enlacesPaginas = ["Nosotros", "Anuncios", "Blog", "Contacto"]
+-var tituloNosotros = ["Seguridad", "El mejor precio", "A tiempo"]
+mixin cajaNosotros (icono, titulo, contenido)
+     .cajaNosotros
+          .cajaNosotros__icono: i(class="icono "+icono)
+          .cajanosotros__contenido
+               h3= titulo
+               p= contenido
+     
