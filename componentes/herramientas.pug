@@ -1,9 +1,27 @@
 -var enlacesPaginas = ["Nosotros", "Anuncios", "Blog", "Contacto"]
 -var tituloNosotros = ["Seguridad", "El mejor precio", "A tiempo"]
+-var titulosDepas = ["Casa de lujo en lago","Casa terminados de lujo","Casa de lujo con alberca"]
 mixin cajaNosotros (icono, titulo, contenido)
      .cajaNosotros
           .cajaNosotros__icono: i(class="icono "+icono)
           .cajanosotros__contenido
                h3= titulo
                p= contenido
-     
+mixin cajaDepas (imagen, titulo, contenido, precio,baños,auto,camas)
+     .cajaDepas
+          .cajaDepas__imagen: img(src=""+imagen alt="Imagen de departamento")
+          .cajaDepas__contenido
+               h3= titulo
+               p= contenido   
+               p.precio= precio  
+          .cajaDepas__especificaciones
+               .icono-especificaciones
+                    i(class="fas fa-toilet")
+                    span= baños
+               .icono-especificaciones
+                    i(class="fas fa-car")
+                    span= auto
+               .icono-especificaciones
+                    i(class="fas fa-bed")
+                    span= camas
+          a(href="#").boton.boton-naranja ver propiedad
