@@ -58,11 +58,11 @@ img{
      display: block;
      padding: 0.9375em;
      margin: 0.625em 0.625em;
+     text-align: center;
      text-transform: uppercase;
      box-sizing: border-box;
 }
 .boton-naranja{
-     font-weight: ;
      color: white;
      background-color: #be8913;
 }
@@ -74,7 +74,8 @@ img{
      grid-template-areas: 
      "header"
      "nosotros"
-     "depas";
+     "depas"
+     "encuentra";
      gap: 1.25rem;
 }
 .header {
@@ -179,6 +180,21 @@ img{
      font-size: 1.875em;
      margin-right: 0.625rem;
 }
+/* Encuentra */
+.encuentra{
+     grid-area: encuentra;
+     display: flex;
+     align-items: center;
+     background-image: url('../img/encuentra.jpg');
+     background-position: center center;
+     background-size: cover;
+     color: white;
+     line-height: 2;
+}
+.encuentra h1,
+.encuentra p{
+     margin-bottom: 20px;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -190,7 +206,8 @@ img{
           grid-template-areas: 
           "header header header header header"
           "nosotros nosotros nosotros nosotros nosotros"
-          "depas depas depas depas depas";
+          "depas depas depas depas depas"
+          "encuentra encuentra encuentra encuentra encuentra";
      }
      .header__nav__menu{
           margin-top: 0;
@@ -212,6 +229,13 @@ img{
      }
      .cajaDepas{
           flex: 0 0 calc(50% - 10px);
+     }
+     /* encuentra */
+     .encuentra{
+          height: 300px;
+     }
+     .encuentra__detalles .boton{
+          display: inline-block
      }
  }
 
