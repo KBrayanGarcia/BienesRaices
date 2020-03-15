@@ -81,7 +81,8 @@ img{
      "nosotros"
      "depas"
      "encuentra"
-     "blog__testimonio";
+     "blog__testimonio"
+     "footer";
      gap: 1.25rem;
 }
 .header {
@@ -256,6 +257,17 @@ img{
 .testimonio__autor{
      font-weight: 800;
 }
+/* footer */
+footer{
+     grid-area: footer;
+     padding: 1.875em 0;
+     background-color: rgb(52, 52, 52);
+     color: white;
+     text-align: center;
+}
+footer .menuEnlaces{
+     display: none;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
      body{
@@ -268,7 +280,8 @@ img{
           "nosotros nosotros nosotros nosotros nosotros"
           "depas depas depas depas depas"
           "encuentra encuentra encuentra encuentra encuentra"
-          "blog__testimonio blog__testimonio blog__testimonio blog__testimonio blog__testimonio";
+          "blog__testimonio blog__testimonio blog__testimonio blog__testimonio blog__testimonio"
+          "footer footer footer footer footer";
      }
      .blog__testimonial{
           grid-area: blog__testimonio;
@@ -318,6 +331,18 @@ img{
      /* Testimoniales */
      .testimoniales{
           flex: 0 0 calc(40% - 10px);
+     }
+     /* footer */
+     .footer-flex{
+          display: flex;
+          justify-content: space-between;
+     }
+     footer .menuEnlaces{
+          display: block;
+     }
+     footer .menuEnlaces a{
+          color: white;
+          padding: 0.625em 0.3125em;
      }
  }
 
