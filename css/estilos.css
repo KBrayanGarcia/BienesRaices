@@ -75,7 +75,8 @@ img{
      "header"
      "nosotros"
      "depas"
-     "encuentra";
+     "encuentra"
+     "blog";
      gap: 1.25rem;
 }
 .header {
@@ -193,9 +194,27 @@ img{
 }
 .encuentra h1,
 .encuentra p{
-     margin-bottom: 20px;
+     margin-bottom: 1.25em;
 }
-
+/* Blog */
+.blog{
+     grid-area: blog;
+     line-height: 2;
+}
+.cajaEntrada{
+     padding: 20px 0;
+}
+.cajaEntrada__detalles__titulo::after{
+     content: ' ';
+     display: block;
+     margin: 0.625rem 0;
+     width: 50%;
+     height: 0.25rem;
+     background-color: green;
+}
+.fechaAutor span{
+     color: orange;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
      body{
@@ -232,7 +251,7 @@ img{
      }
      /* encuentra */
      .encuentra{
-          height: 300px;
+          height: 18.75em;
      }
      .encuentra__detalles .boton{
           display: inline-block

@@ -25,3 +25,14 @@ mixin cajaDepas (imagen, titulo, contenido, precio,baños,auto,camas)
                     i(class="fas fa-bed")
                     span= camas
           a(href="#").boton.boton-naranja ver propiedad
+mixin cajaBlog (imagen, titulo, fecha, autor, contenido)
+     article.cajaEntrada
+          .cajaEntrada__img
+               img(src="img/"+imagen, alt="Imagen de la entrada")
+          .cajaEntrada__detalles
+               h3.cajaEntrada__detalles__titulo= titulo
+               p.fechaAutor Escrito el 
+                    span= fecha + ' ' 
+                    |por: 
+                    span= autor
+               p.informeEntrada= contenido
