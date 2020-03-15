@@ -73,10 +73,20 @@ img{
     
 }
 /* Header */
+.grid-global-nosotros{
+     display: grid;
+     grid-template-columns:(1fr);
+     grid-template-areas:
+     "headerSecu" 
+     "conoce"
+     "nosotros"
+     "footer";
+     gap: 1.25rem;
+}
 .grid-global{
      display: grid;
      grid-template-columns:(1fr);
-     grid-template-areas: 
+     grid-template-areas:
      "header"
      "nosotros"
      "depas"
@@ -84,6 +94,17 @@ img{
      "blog__testimonio"
      "footer";
      gap: 1.25rem;
+}
+.header__secundario{
+     text-align: center;
+     grid-area: headerSecu;
+     height: 100px;
+     color: white;
+     background-color: #333333;
+}
+.header__secundario .header__container{
+     display: flex;
+     justify-content: center;
 }
 .header {
      grid-area: header;
@@ -102,6 +123,7 @@ img{
      justify-content: space-between;
 }
 .header__nav__logotipo h1{
+     color: white;
      text-transform: uppercase;
      font-weight: 100;
      letter-spacing: 0.125em;
@@ -268,20 +290,15 @@ footer{
 footer .menuEnlaces{
      display: none;
 }
+/* Paginas externas */
+/* Nosotros */
+.conoce{
+     grid-area: conoce;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
      body{
           font-size: 14px;
-     }
-     .grid-global{
-          grid-template-columns: repeat(5, 1fr);
-          grid-template-areas: 
-          "header header header header header"
-          "nosotros nosotros nosotros nosotros nosotros"
-          "depas depas depas depas depas"
-          "encuentra encuentra encuentra encuentra encuentra"
-          "blog__testimonio blog__testimonio blog__testimonio blog__testimonio blog__testimonio"
-          "footer footer footer footer footer";
      }
      .blog__testimonial{
           grid-area: blog__testimonio;
@@ -344,6 +361,8 @@ footer .menuEnlaces{
           color: white;
           padding: 0.625em 0.3125em;
      }
+     /* Paginas externas */
+     /* Nosotros */
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -359,6 +378,16 @@ footer .menuEnlaces{
      .blog__testimonial{
           display: flex;
           justify-content: space-between;
+     }
+     .conoce_flex{
+          display: flex;
+          justify-content: space-between;
+     }
+     .conoce__img{
+          flex: 0 0 calc(50% - 10px);
+     }
+     .conoce__detalles{
+          flex: 0 0 calc(50% - 10px);
      }
  }
 
