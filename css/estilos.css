@@ -96,10 +96,11 @@ img{
      gap: 1.25rem;
 }
 .header__secundario{
-     text-align: center;
+     padding: 30px 0;
      grid-area: headerSecu;
-     height: 100px;
+     height: auto;
      color: white;
+     text-align: center;
      background-color: #333333;
 }
 .header__secundario .header__container{
@@ -135,6 +136,10 @@ img{
      margin-top: 0.625em;
 }
 .header__nav__menu a{
+     
+}
+.enlaces a{
+     text-transform: capitalize;
      display: block;
      padding: 0.3125em 0.625em;
      color: white;
@@ -306,7 +311,7 @@ footer .menuEnlaces{
      .header__nav__menu{
           margin-top: 0;
      }
-     .header__nav__menu a{
+     .enlaces a{
           display: inline-block;
      }
      .header__slogan{
@@ -353,6 +358,7 @@ footer .menuEnlaces{
      .footer-flex{
           display: flex;
           justify-content: space-between;
+          align-items: center;
      }
      footer .menuEnlaces{
           display: block;
