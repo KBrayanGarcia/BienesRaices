@@ -36,3 +36,8 @@ mixin cajaBlog (imagen, titulo, fecha, autor, contenido)
                     |por: 
                     span= autor
                p.informeEntrada= contenido
+mixin cajaTestimonial (contenido, autor)
+     blockquote.testimonio
+          p.contenido-testimonio= contenido
+          p.testimonio__autor --
+               span= autor

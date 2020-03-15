@@ -6,6 +6,7 @@
 body {
      font-family: 'Open Sans', sans-serif;
      font-size: 13px;
+     line-height: 2;
 }
 
 h1,
@@ -51,6 +52,7 @@ img{
 }
 .titulo_seccion{
      color: #4a4a4a;
+     text-align: center;
      font-weight: 100;
      margin-bottom: 0.9375rem;
 }
@@ -66,7 +68,10 @@ img{
      color: white;
      background-color: #be8913;
 }
-
+.blog__testimonial{
+     grid-area: blog__testimonio;
+    
+}
 /* Header */
 .grid-global{
      display: grid;
@@ -76,7 +81,7 @@ img{
      "nosotros"
      "depas"
      "encuentra"
-     "blog";
+     "blog__testimonio";
      gap: 1.25rem;
 }
 .header {
@@ -201,19 +206,55 @@ img{
      grid-area: blog;
      line-height: 2;
 }
+
 .cajaEntrada{
-     padding: 20px 0;
+     padding: 0 0 1.25em 0;
 }
 .cajaEntrada__detalles__titulo::after{
      content: ' ';
      display: block;
-     margin: 0.625rem 0;
+     margin: 0.625em 0;
      width: 50%;
-     height: 0.25rem;
+     height: 0.25em;
      background-color: green;
 }
 .fechaAutor span{
      color: orange;
+}
+/* Testimoniales */
+.testimoniales{
+     grid-area: testimonial;
+}
+.testimonios{
+     padding: 1.25em 1.25em 1.25em 3.75em;
+     background-color: green;
+     border-radius: 0.625em;
+     -webkit-border-radius: 0.625em;
+     -moz-border-radius: 0.625em;
+     -ms-border-radius: 0.625em;
+     -o-border-radius: 0.625em;
+}
+.testimonio{
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     line-height: 3;
+     font-weight: 100;
+     color: white;
+     position: relative;
+}
+.contenido-testimonio::before{
+     content: ' ';
+     background-image: url('../img/comilla.svg');   
+     width: 3.125em;
+     height: 3.125em;
+     color: white;
+     display: inline-block;
+     position: absolute;
+     left: -50px;
+}
+.testimonio__autor{
+     font-weight: 800;
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -226,7 +267,11 @@ img{
           "header header header header header"
           "nosotros nosotros nosotros nosotros nosotros"
           "depas depas depas depas depas"
-          "encuentra encuentra encuentra encuentra encuentra";
+          "encuentra encuentra encuentra encuentra encuentra"
+          "blog__testimonio blog__testimonio blog__testimonio blog__testimonio blog__testimonio";
+     }
+     .blog__testimonial{
+          grid-area: blog__testimonio;
      }
      .header__nav__menu{
           margin-top: 0;
@@ -256,6 +301,24 @@ img{
      .encuentra__detalles .boton{
           display: inline-block
      }
+     /* Blog */
+     .blog{
+          flex: 0 0 calc(60% - 10px);
+     }
+     .cajaEntrada{
+          display: flex;
+          justify-content: space-between;
+     }
+     .cajaEntrada__img{
+          flex: 0 0 calc(40% - 10px);
+     }
+     .cajaEntrada__detalles{
+          flex: 0 0 calc(60% - 10px);
+     }
+     /* Testimoniales */
+     .testimoniales{
+          flex: 0 0 calc(40% - 10px);
+     }
  }
 
 /* Medium devices (tablets, 768px and up) */
@@ -267,6 +330,10 @@ img{
      }
      .cajaDepas{
           flex: 0 0 calc(33.3% - 10px);
+     }
+     .blog__testimonial{
+          display: flex;
+          justify-content: space-between;
      }
  }
 
