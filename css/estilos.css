@@ -358,8 +358,10 @@ footer .menuEnlaces{
           display: inline-block
      }
      /* Blog */
-     .blog{
+     .blogpagina .blog{
           width: 60%;
+     }
+     .blog{
           flex: 0 0 calc(60% - 10px);
      }
      .cajaEntrada{
