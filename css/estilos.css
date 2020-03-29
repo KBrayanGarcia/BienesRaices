@@ -73,6 +73,15 @@ img{
     
 }
 /* Header */
+.grid-global-blog{
+     display: grid;
+     grid-template-columns:(1fr);
+     grid-template-areas:
+     "headerSecu"
+     "blogPagina"
+     "footer";
+     gap: 1.25rem;
+}
 .grid-global-anuncios{
      display: grid;
      grid-template-columns:(1fr);
@@ -239,6 +248,9 @@ img{
      margin-bottom: 1.25em;
 }
 /* Blog */
+.blogPagina{
+     grid-area: blogPagina;
+}
 .blog{
      grid-area: blog;
      line-height: 2;
@@ -347,6 +359,7 @@ footer .menuEnlaces{
      }
      /* Blog */
      .blog{
+          width: 60%;
           flex: 0 0 calc(60% - 10px);
      }
      .cajaEntrada{
@@ -389,6 +402,9 @@ footer .menuEnlaces{
      }
      .cajaDepas{
           flex: 0 0 calc(33.3% - 10px);
+     }
+     .blogPagina{
+          width: 60%;
      }
      .blog__testimonial{
           display: flex;
