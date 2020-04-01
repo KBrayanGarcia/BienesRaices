@@ -41,6 +41,7 @@ a{
 }
 img{
      width: 100%;
+     vertical-align: middle;
 }
 
 /* Globales */
@@ -73,6 +74,15 @@ img{
     
 }
 /* Header */
+.grid-global-contacto{
+     display: grid;
+     grid-template-columns:(1fr);
+     grid-template-areas:
+     "headerSecu"
+     "formularioContacto"
+     "footer";
+     gap: 1.25rem;
+}
 .grid-global-blog{
      display: grid;
      grid-template-columns:(1fr);
@@ -321,6 +331,61 @@ footer .menuEnlaces{
 .conoce{
      grid-area: conoce;
 }
+/* Formulario pagina contacto*/
+.formulario{
+     grid-area: formularioContacto;
+}
+fieldset{
+     padding: 0.625em;
+     margin-bottom: 0.625em;
+}
+legend{
+     font-size: 1.2em;
+     font-weight: 500;
+     font-family: 'Lato', sans-serif;
+}
+form label{
+     display: block;
+     text-transform: uppercase;
+     font-weight: 800;
+     font-family: 'Lato', sans-serif;
+     margin: 5px 0;
+}
+form input,select,textarea{
+     display: block;
+     width: 100%;
+     box-sizing: border-box;
+     padding: 0.75em 0.9375em;
+     border-radius: 0.75em;
+     -webkit-border-radius: 0.75em;
+     -moz-border-radius: 0.75em;
+     -ms-border-radius: 0.75em;
+     -o-border-radius: 0.75em;
+     background-color: rgb(205, 205, 205);
+     border: none;
+}
+form input[type="submit"]{
+     width: unset;
+}
+form .boton{
+     padding: 12px 20px;
+     margin: 0;
+     background-color: rgb(14, 144, 38);
+     color: white;
+     font-weight: 700;
+     border-radius: 0px;
+     -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+     -ms-border-radius: 0px;
+     -o-border-radius: 0px;
+}
+form p{
+     font-size: 0.8125em;
+}
+.deseoContacto{
+     display: flex;
+     align-items: center;
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
      body{
@@ -421,6 +486,10 @@ footer .menuEnlaces{
      }
      .conoce__detalles{
           flex: 0 0 calc(50% - 10px);
+     }
+     form{
+          width: 75%;
+          margin: 0 auto;
      }
  }
 

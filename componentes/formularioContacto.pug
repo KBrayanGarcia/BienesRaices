@@ -1,0 +1,37 @@
+section.formulario
+     .container_centrado
+          h2.titulo_seccion Contacto
+     figure
+          img(src="img/destacada3.jpg", alt="Imagen de contacto")
+     .container_centrado
+          h2.titulo_seccion Llena el formulario de contacto
+          form(action="index.html")
+               fieldset
+                    legend Informacion personal
+                    //+campo(nombre del for e id, nombreLabel, tipoInput", Placeholder)
+                    +campo("nombre", "Tu nombre", "text", "Tu nombre")
+                    +campo("correo", "Email", "email", "Tu correo electronico")
+                    +campo("numero", "Telefono", "text", "Tu numero de celular")
+                    label(for="mensaje") Mensaje
+                    textarea(id="mensaje", cols="30", rows="10")
+               fieldset
+                    legend Informacion sobre la propiedad
+                    label(for="vendeOCompra") Vende o Compra
+                    select(id="vendeOCompra")
+                         option(value selected disabled) -- Seleccione --
+                         option Compra
+                         option Venta
+                    +campo("presupuesto", "Tu presupuesto","number", "")
+               fieldset
+                    legend Contacto
+                    p Como deseas ser contactado
+                    .deseoContacto
+                         label(for="telefono") Telefono
+                         input(id="telefono" type="radio" name="deseo")
+                         label(for="email") Correo
+                         input(id="email" type="radio" name="deseo")
+                    p Si eligio telefono, eliga la fecha y hora
+                    +campo("fecha","Fecha","date")
+                    +campo("hora","Hora","time")
+               input(type="submit", value="Enviar" class="boton")
+

@@ -42,3 +42,7 @@ mixin cajaTestimonial (contenido, autor)
           p.contenido-testimonio= contenido
           p.testimonio__autor --
                span= autor
+mixin campo (asignacion, nombreLabel, tipoInput, placeholder)
+     .campo
+          label(for=""+asignacion)= nombreLabel
+          input(type=""+tipoInput id=""+asignacion placeholder=""+placeholder)
